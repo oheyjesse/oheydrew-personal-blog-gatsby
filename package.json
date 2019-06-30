@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-personal-starter-blog",
+  "name": "oheydrew-personal-blog-gatsby",
   "private": true,
-  "description": "A personal blog starter for a blog powered by Netlify CMS, based on the default blog starter",
+  "description": "Tech blog / site for @oheydrew - Drew Noll. A place to put my talks, Elixir, React, Ruby and other techy rants.",
   "version": "0.1.0",
-  "author": "Thomas Wang <thomas@wang.sh>",
+  "author": "Drew Noll <thomas@wang.sh>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
@@ -34,6 +34,7 @@
     "react-helmet": "^5.2.0",
     "react-switch": "^5.0.0",
     "react-typography": "^0.16.19",
+    "rebass": "^3.1.1",
     "styled-components": "^4.2.0",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.54",
@@ -43,7 +44,7 @@
   "devDependencies": {
     "prettier": "^1.17.0"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/oheydrew/oheydrew-personal-blog-gatsby#readme",
   "keywords": [
     "gatsby"
   ],
@@ -51,7 +52,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/oheydrew/oheydrew-personal-blog-gatsby.git"
   },
   "scripts": {
     "build": "gatsby build",
