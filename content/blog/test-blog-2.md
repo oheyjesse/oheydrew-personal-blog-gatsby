@@ -10,7 +10,7 @@ This is [EVEN BETTER](http://www.nyan.cat/)
 
 ![](/assets/original.gif)
 
-```ruby
+```elixir
 def hello() do
   hello
 end
