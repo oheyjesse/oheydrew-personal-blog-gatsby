@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 import MainLayout from 'src/layouts/MainLayout';
 import SEO from 'src/components/SEO';
-import Button from 'src/components/Button';
+import Button from 'src/components/button';
 
 const IndexPage = ({ location }) => {
   const siteTitle = 'oheydrew.me - Tech rants and other things';
