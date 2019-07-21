@@ -1,88 +1,73 @@
-import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
+// External Packages
+import React from 'react';
+import styled, { ThemeProvider } from 'styled-components';
 
-import { rhythm, scale } from "../utils/typography"
+// Internal Packages/Components
+import GlobalStyles from '../theme/GlobalStyles';
+import { theme } from '../theme';
 
-const Wrapper = styled.div`
-  min-height: 100vh;
-`
+// Rebass
+import { Box, Flex, Text } from 'rebass';
 
-const Footer = styled.footer`
-  text-align: center;
-  margin: 24px;
-`
+const FlexWrapper = styled(Flex)(() => ({
+  minHeight: '100vh',
+}));
 
-const MainLayout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const blogPath = `${__PATH_PREFIX__}/blog/`
+const Header = styled(Box)(({ theme }) => ({
+  minHeight: theme.space.xl,
+}));
 
-  const header = () => {
-    if (location.pathname === rootPath || location.pathname === blogPath) {
-      return (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={location.pathname === blogPath ? `/blog/` : `/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      return (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/blog/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
-  }
+const Main = styled(Box)(({ theme }) => ({}));
+
+const Footer = styled(Flex)(({ theme }) => ({
+  minHeight: theme.space.lg,
+}));
+
+const MainLayout = ({ children }) => {
+  const { colors, fontSizes } = theme;
+  const { lightgrey } = colors;
 
   return (
-    <Wrapper>
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>{header}</header>
-        <main>{children}</main>
-      </div>
-      <Footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
-      </Footer>
-    </Wrapper>
-  )
-}
+    <>
+      {/* Inject dynamic global styles */}
+      <GlobalStyles theme={theme} />
 
-MainLayout.displayName = "MainLayout"
-export default MainLayout
+      {/* Provide 'theme' object to all components */}
+      <ThemeProvider theme={theme}>
+        <FlexWrapper
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+        >
+          {/* Header */}
+          <Header height={'sm'} bg={lightgrey} width={1}>
+            <Text>Hello This is some TEXT</Text>
+          </Header>
+
+          {/* Main Content */}
+          <Main py={3} px={[3, 3, '10vw']} flex="auto" bg="white">
+            {children}
+          </Main>
+
+          {/* Page Footer */}
+          <Footer
+            width={1}
+            bg={lightgrey}
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Text fontSize={fontSizes[0]} textAlign="center">
+              © {new Date().getFullYear()}, Built with{' '}
+              <a href="https://www.gatsbyjs.org">Gatsby</a> using{' '}
+              <a href="https://rebassjs.org/">Rebass</a> &{' '}
+              <a href="https://www.styled-components.com/">styled-components</a>
+            </Text>
+          </Footer>
+        </FlexWrapper>
+      </ThemeProvider>
+    </>
+  );
+};
+
+MainLayout.displayName = 'MainLayout';
+export default MainLayout;
