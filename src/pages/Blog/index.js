@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import Bio from '../components/Bio';
-import MainLayout from '../layouts/MainLayout';
-import SEO from '../components/SEO';
-import { rhythm } from '../utils/typography';
-import Button from '../components/Button';
+import Bio from 'src/components/Bio';
+import MainLayout from 'src/layouts/MainLayout';
+import SEO from 'src/components/SEO';
+import { rhythm } from 'src/utils/typography';
+import Button from 'src/components/Button';
 
 class Blog extends React.Component {
   render() {

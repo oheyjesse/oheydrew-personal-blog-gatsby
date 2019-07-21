@@ -42,6 +42,7 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+    "gatsby-plugin-root-import": "^2.0.5",
     "prettier": "^1.17.0"
   },
   "homepage": "https://github.com/oheydrew/oheydrew-personal-blog-gatsby#readme",
