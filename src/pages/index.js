@@ -1,19 +1,19 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react';
+import { Link } from 'gatsby';
 
-import MainLayout from "../layouts/MainLayout"
-import SEO from "../components/seo"
-import Button from "../components/button"
+import MainLayout from '../layouts/MainLayout';
+import SEO from '../components/SEO';
+import Button from '../components/Button';
 
 const IndexPage = ({ location }) => {
-  const siteTitle = "oheydrew.me - Tech rants and other things"
+  const siteTitle = 'oheydrew.me - Tech rants and other things';
 
   return (
     <MainLayout location={location} title={siteTitle}>
       <SEO title="Home" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
       <img style={{ margin: 0 }} src="./GatsbyScene.svg" alt="Gatsby Scene" />
       <h1>
-        Hey people{" "}
+        Hey people{' '}
         <span role="img" aria-label="wave emoji">
           👋
         </span>
@@ -28,8 +28,8 @@ const IndexPage = ({ location }) => {
         <Button marginTop="35px">Go to Blog</Button>
       </Link>
     </MainLayout>
-  )
-}
+  );
+};
 
-IndexPage.displayName = "Index"
-export default IndexPage
+IndexPage.displayName = 'Index';
+export default IndexPage;
