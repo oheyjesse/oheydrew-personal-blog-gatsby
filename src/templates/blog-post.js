@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby';
 
 import Bio from '../components/bio';
 import MainLayout from '../layouts/MainLayout';
-import SEO from '../components/SEO';
+import SEO from '../components/seo';
 import { rhythm, scale } from '../utils/typography';
 
 class BlogPostTemplate extends React.Component {

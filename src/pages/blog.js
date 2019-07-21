@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 
 import MainLayout from 'src/layouts/MainLayout';
-import SEO from 'src/components/SEO';
+import SEO from 'src/components/seo';
 import { rhythm } from 'src/utils/typography';
 
 import Bio from 'src/components/bio';

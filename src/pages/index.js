@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import MainLayout from 'src/layouts/MainLayout';
-import SEO from 'src/components/SEO';
+import SEO from 'src/components/seo';
 import Button from 'src/components/button';
 
 const IndexPage = ({ location }) => {
